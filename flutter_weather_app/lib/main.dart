@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
+import './screens/weather_app.dart';
 
-void main()=> runApp(
-  MaterialApp(
-    title: "Flutter Weather application",
-    home: AppHome(),
-  )
-);
+void main()=> runApp(AppHome());
 
 class AppHome extends StatefulWidget {
 
@@ -18,6 +14,13 @@ class AppHome extends StatefulWidget {
 class AppHomeState extends State<AppHome> {
   @override
   Widget build(BuildContext context) {
-    
+    return MaterialApp(
+      title: "Flutter weather application",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: WeatherApp(),
+    );
   }
 }
